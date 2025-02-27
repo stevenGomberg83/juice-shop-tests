@@ -22,6 +22,7 @@ LOGIN_PASSWORD = "badPassword123"
 def driver():
     # Configure Chrome to run in headless mode so tests can run without a UI
     options = Options()
+    options.add_argument("--headless")
     # Initialize the Chrome WebDriver (ensure chromedriver is in your PATH)
     driver = webdriver.Chrome(options=options)
     yield driver
