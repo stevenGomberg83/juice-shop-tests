@@ -28,7 +28,7 @@ def driver():
     yield driver
     driver.quit()
 
-def test_always_pass(driver):
+def test_user_login(driver):
     # Clear all cookies to ensure a fresh session
     driver.delete_all_cookies()
 
@@ -41,7 +41,7 @@ def test_always_pass(driver):
     print("Test executed at:", current_time)
 
 
-    #Wait up to 15 seconds for the website to load
+    #Wait up to 10 seconds for the website to load
     wait = WebDriverWait(driver, 10)
 
 
